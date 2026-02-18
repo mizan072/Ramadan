@@ -1,7 +1,8 @@
-const CACHE_NAME = 'ramadan-app-v3';
+const CACHE_NAME = 'ramadan-app-v4';
 const ASSETS = [
   './',
   './index.html',
+  './manifest.json',
   'https://cdn.tailwindcss.com',
   'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css',
   'https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Noto+Sans+Bengali:wght@300;400;500;600;700;800&family=Noto+Serif+Bengali:wght@400;600;700&display=swap'
