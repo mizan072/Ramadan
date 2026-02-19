@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <meta name="description" content="মাহে রমজান ২০২৬ - মেহেরপুর জেলার সাহরী ও ইফতারের সময়সূচি">
+    <meta name="description" content="মাহে রমজান ২০২৬ - মেহেরপুর জেলার সাহরী ও ইফতারের সময়সূচি">
     <title>Ramadan 2026 | Meherpur</title>
     
-    <!-- PWA Meta Tags -->
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#0f3d3e">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -14,7 +13,6 @@
     <meta name="apple-mobile-web-app-title" content="Ramadan 26">
     <link rel="apple-touch-icon" href="https://play-lh.googleusercontent.com/rc63hc42UWDSZAEuYGKMMIogEUzy8lNYJ3_VkiKddW3IlW1FZwXD4ec91xchM8d0JA">
 
-    <!-- Styles & Fonts -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Sans+Bengali:wght@300;400;500;600;700&family=Noto+Serif+Bengali:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -72,7 +70,6 @@
 </head>
 <body class="min-h-screen text-slate-800 flex flex-col items-center pb-28 select-none">
 
-    <!-- Header -->
     <header class="w-full bg-islamic-base text-islamic-cream pt-12 pb-20 px-4 rounded-b-[3rem] shadow-2xl relative overflow-hidden shrink-0">
         <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
             <svg width="100%" height="100%"><pattern id="pattern-circles" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M20 0 L40 20 L20 40 L0 20 Z" fill="none" stroke="currentColor" stroke-width="1"/></pattern><rect x="0" y="0" width="100%" height="100%" fill="url(#pattern-circles)"></rect></svg>
@@ -98,10 +95,8 @@
 
     <main class="w-full max-w-lg px-4 -mt-12 z-20 flex-grow relative">
         
-        <!-- VIEW 1: HOME DASHBOARD -->
         <div id="view-home" class="tab-content active space-y-4">
             
-            <!-- Main Timer Card -->
             <div class="glass-card rounded-3xl p-6 text-center relative overflow-hidden">
                 <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-islamic-gold to-transparent opacity-50"></div>
                 
@@ -139,23 +134,21 @@
                 </div>
             </div>
 
-            <!-- Dua Card -->
             <div class="glass-card rounded-2xl p-5 bg-gradient-to-br from-islamic-base to-[#0a2e2f] text-white shadow-lg relative overflow-hidden group">
                 <div class="absolute -right-6 -bottom-6 text-9xl text-white opacity-5 rotate-12 group-hover:rotate-0 transition-transform duration-700"><i class="fas fa-hands-praying"></i></div>
                 <div class="relative z-10">
                     <div class="flex justify-between items-start mb-2">
-                        <h3 class="font-bold text-islamic-gold text-sm flex items-center gap-2"><i class="fas fa-star-and-crescent text-xs"></i> ইফতারের দোয়া</h3>
+                        <h3 class="font-bold text-islamic-gold text-sm flex items-center gap-2"><i class="fas fa-star-and-crescent text-xs"></i> ইফতারের দোয়া</h3>
                         <button onclick="app.copyDua()" class="text-xs text-white/50 hover:text-white"><i class="fas fa-copy"></i></button>
                     </div>
-                    <p class="font-arabic text-2xl leading-loose text-right mb-3" dir="rtl">اَللّٰهُمَّ لَكَ صُمْتُ وَ عَلَى رِزْقِكَ اَفْطَرْتُ</p>
-                    <p class="text-xs text-gray-300 leading-relaxed font-bangla opacity-90">হে আল্লাহ! আমি তোমারই জন্য রোজা রেখেছি এবং তোমারই দেওয়া রিযিক দ্বারা ইফতার করছি।</p>
+                    <p class="font-arabic text-2xl leading-loose text-right mb-3" dir="rtl">اَللّٰهُمَّ لَكَ صُمْتُ وَ عَلَى رِزْقِكَ اَفْطَرْتُ</p>
+                    <p class="text-xs text-gray-300 leading-relaxed font-bangla opacity-90">হে আল্লাহ! আমি তোমারই জন্য রোজা রেখেছি এবং তোমারই দেওয়া রিযিক দ্বারা ইফতার করছি।</p>
                 </div>
             </div>
 
-            <!-- Schedule Table -->
             <div class="glass-card rounded-2xl overflow-hidden shadow-sm border-0 flex flex-col h-[350px]">
                 <div class="bg-gray-50/90 backdrop-blur px-5 py-3 border-b border-gray-200 flex justify-between items-center sticky top-0 z-10">
-                    <h3 class="font-bold text-gray-700 font-title flex items-center gap-2"><i class="far fa-calendar-alt"></i> পুরো মাসের সময়সূচি</h3>
+                    <h3 class="font-bold text-gray-700 font-title flex items-center gap-2"><i class="far fa-calendar-alt"></i> পুরো মাসের সময়সূচি</h3>
                     <button onclick="app.scrollToToday()" class="text-xs bg-islamic-base text-white px-2.5 py-1 rounded-md shadow hover:bg-islamic-light transition">আজ</button>
                 </div>
                 <div class="overflow-y-auto flex-grow relative scroll-smooth" id="schedule-container">
@@ -172,9 +165,18 @@
                     </table>
                 </div>
             </div>
+
+            <div class="text-center pt-3 pb-1">
+                <p class="text-[13px] text-gray-500 font-bangla font-medium">
+                    Developed By 
+                    <a href="https://t.me/Mizan0072" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 font-bold text-islamic-base hover:text-islamic-gold transition-colors ml-1">
+                        <i class="fab fa-telegram text-[#229ED9] text-lg"></i> MizaN
+                    </a>
+                </p>
+            </div>
+
         </div>
 
-        <!-- VIEW 2: TASBIH -->
         <div id="view-tasbih" class="tab-content h-full">
             <div class="glass-card rounded-3xl p-8 text-center shadow-lg mt-4 flex flex-col items-center justify-center min-h-[500px] relative overflow-hidden">
                 <div class="absolute top-0 right-0 p-4 opacity-10"><i class="fas fa-kaaba text-9xl"></i></div>
@@ -192,7 +194,6 @@
             </div>
         </div>
 
-        <!-- VIEW 3: QIBLA -->
         <div id="view-qibla" class="tab-content">
             <div class="glass-card rounded-3xl p-6 text-center shadow-lg mt-4 min-h-[500px] flex flex-col justify-center">
                 <h2 class="text-xl font-bold text-islamic-base mb-2 font-title">কিবলা কম্পাস</h2>
@@ -214,12 +215,11 @@
         </div>
     </main>
 
-    <!-- Bottom Navigation -->
     <nav class="fixed bottom-0 w-full bg-white/95 backdrop-blur-md border-t border-gray-200 px-6 pb-safe pt-2 z-40">
         <div class="flex justify-around items-end max-w-md mx-auto h-16 pb-2">
             <button onclick="app.switchTab('home')" class="nav-item active flex-1 flex flex-col items-center group transition-all duration-300">
                 <div class="p-1.5 rounded-xl group-hover:bg-gray-50 transition"><i class="fas fa-home text-xl mb-0.5"></i></div>
-                <span class="text-[10px] font-bold">নীড়পাতা</span>
+                <span class="text-[10px] font-bold">নীড়পাতা</span>
             </button>
             <button onclick="app.switchTab('tasbih')" class="nav-item flex-1 flex flex-col items-center group transition-all duration-300">
                 <div class="p-1.5 rounded-xl group-hover:bg-gray-50 transition"><i class="fas fa-fingerprint text-xl mb-0.5"></i></div>
@@ -232,12 +232,11 @@
         </div>
     </nav>
 
-    <!-- Modals -->
     <div id="alarm-modal" class="fixed inset-0 z-[100] flex items-center justify-center px-4 pointer-events-none opacity-0 transition-opacity duration-300">
         <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="app.closeAlarm()"></div>
         <div class="glass-card w-full max-w-sm p-8 rounded-3xl text-center relative transform scale-90 transition-all duration-300 z-10 bg-white border-2 border-islamic-gold shadow-2xl">
             <div class="w-24 h-24 bg-islamic-gold/10 rounded-full flex items-center justify-center mx-auto mb-6 animate-bounce"><i class="fas fa-utensils text-4xl text-islamic-gold"></i></div>
-            <h2 class="text-3xl font-bold text-islamic-base mb-2 font-title">ইফতারের সময় হয়েছে!</h2>
+            <h2 class="text-3xl font-bold text-islamic-base mb-2 font-title">ইফতারের সময় হয়েছে!</h2>
             <p class="text-gray-500 mb-6">আল্লাহ আপনার রোজা কবুল করুন।</p>
             <button onclick="app.closeAlarm()" class="w-full py-3.5 bg-islamic-base text-white rounded-xl font-bold shadow-lg text-lg">আমিন</button>
         </div>
@@ -246,16 +245,16 @@
 
     <script>
         const scheduleData = [
-            {r:1,d:"১৯ ফেব্রুয়ারি",date:"2026-02-19",s:"05:19",f:"05:21",i:"18:04",first:true},
-            {r:2,d:"২০ ফেব্রুয়ারি",date:"2026-02-20",s:"05:18",f:"05:20",i:"18:04"},
-            {r:3,d:"২১ ফেব্রুয়ারি",date:"2026-02-21",s:"05:17",f:"05:19",i:"18:05"},
-            {r:4,d:"২২ ফেব্রুয়ারি",date:"2026-02-22",s:"05:16",f:"05:19",i:"18:05"},
-            {r:5,d:"২৩ ফেব্রুয়ারি",date:"2026-02-23",s:"05:16",f:"05:18",i:"18:06"},
-            {r:6,d:"২৪ ফেব্রুয়ারি",date:"2026-02-24",s:"05:15",f:"05:17",i:"18:06"},
-            {r:7,d:"২৫ ফেব্রুয়ারি",date:"2026-02-25",s:"05:14",f:"05:16",i:"18:07"},
-            {r:8,d:"২৬ ফেব্রুয়ারি",date:"2026-02-26",s:"05:13",f:"05:16",i:"18:07"},
-            {r:9,d:"২৭ ফেব্রুয়ারি",date:"2026-02-27",s:"05:13",f:"05:15",i:"18:08"},
-            {r:10,d:"২৮ ফেব্রুয়ারি",date:"2026-02-28",s:"05:12",f:"05:14",i:"18:08"},
+            {r:1,d:"১৯ ফেব্রুয়ারি",date:"2026-02-19",s:"05:19",f:"05:21",i:"18:04",first:true},
+            {r:2,d:"২০ ফেব্রুয়ারি",date:"2026-02-20",s:"05:18",f:"05:20",i:"18:04"},
+            {r:3,d:"২১ ফেব্রুয়ারি",date:"2026-02-21",s:"05:17",f:"05:19",i:"18:05"},
+            {r:4,d:"২২ ফেব্রুয়ারি",date:"2026-02-22",s:"05:16",f:"05:19",i:"18:05"},
+            {r:5,d:"২৩ ফেব্রুয়ারি",date:"2026-02-23",s:"05:16",f:"05:18",i:"18:06"},
+            {r:6,d:"২৪ ফেব্রুয়ারি",date:"2026-02-24",s:"05:15",f:"05:17",i:"18:06"},
+            {r:7,d:"২৫ ফেব্রুয়ারি",date:"2026-02-25",s:"05:14",f:"05:16",i:"18:07"},
+            {r:8,d:"২৬ ফেব্রুয়ারি",date:"2026-02-26",s:"05:13",f:"05:16",i:"18:07"},
+            {r:9,d:"২৭ ফেব্রুয়ারি",date:"2026-02-27",s:"05:13",f:"05:15",i:"18:08"},
+            {r:10,d:"২৮ ফেব্রুয়ারি",date:"2026-02-28",s:"05:12",f:"05:14",i:"18:08"},
             {r:11,d:"০১ মার্চ",date:"2026-03-01",s:"05:11",f:"05:13",i:"18:09"},
             {r:12,d:"০২ মার্চ",date:"2026-03-02",s:"05:10",f:"05:12",i:"18:09"},
             {r:13,d:"০৩ মার্চ",date:"2026-03-03",s:"05:09",f:"05:12",i:"18:10"},
@@ -315,15 +314,14 @@
                         
                         if (now < sTime) {
                             // CASE 1: Before Sehri (Late Night / Early Morning)
-                            // e.g., 2:30 AM
                             this.showDiff(sTime - now, timerEl);
-                            labelEl.innerText = "সাহরীর শেষ সময়ের বাকি";
+                            labelEl.innerText = "সাহরীর শেষ সময়ের বাকি";
                             labelEl.className = "text-xs text-emerald-600 font-bold uppercase tracking-widest mb-1";
                             timerEl.className = "text-6xl font-bold text-emerald-700 font-mono tracking-tighter bengali-num leading-none";
                         } else if (now < iTime) {
                             // CASE 2: After Sehri, Before Iftar (Daytime)
                             this.showDiff(iTime - now, timerEl);
-                            labelEl.innerText = "ইফতারের সময়ের বাকি";
+                            labelEl.innerText = "ইফতারের সময়ের বাকি";
                             labelEl.className = "text-xs text-amber-600 font-bold uppercase tracking-widest mb-1";
                             timerEl.className = "text-6xl font-bold text-amber-600 font-mono tracking-tighter bengali-num leading-none";
                             
@@ -383,10 +381,10 @@
             saveState() { localStorage.setItem('tasbih', this.state.tasbih); localStorage.setItem('alarm', this.state.alarm); },
             switchTab(tab) { document.querySelectorAll('.tab-content').forEach(e => e.classList.remove('active')); document.querySelectorAll('.nav-item').forEach(e => e.classList.remove('active')); document.getElementById(`view-${tab}`).classList.add('active'); const idx = tab === 'home' ? 0 : tab === 'tasbih' ? 1 : 2; document.querySelectorAll('.nav-item')[idx].classList.add('active'); if(tab === 'tasbih' && 'wakeLock' in navigator) { this.requestWakeLock(); } else if(this.state.wakeLock) { this.state.wakeLock.release().then(() => this.state.wakeLock = null); } },
             async requestWakeLock() { try { this.state.wakeLock = await navigator.wakeLock.request('screen'); } catch(e){} },
-            initCompass() { const btn = document.getElementById('start-compass-btn'); if (typeof DeviceOrientationEvent.requestPermission === 'function') { DeviceOrientationEvent.requestPermission().then(r => { if (r === 'granted') { window.addEventListener('deviceorientation', this.handleOrientation, true); btn.style.display = 'none'; } else { alert('কম্পাস ব্যবহার করতে পারমিশন প্রয়োজন।'); } }).catch(console.error); } else { window.addEventListener('deviceorientationabsolute', this.handleOrientation, true); window.addEventListener('deviceorientation', this.handleOrientation, true); btn.style.display = 'none'; } },
+            initCompass() { const btn = document.getElementById('start-compass-btn'); if (typeof DeviceOrientationEvent.requestPermission === 'function') { DeviceOrientationEvent.requestPermission().then(r => { if (r === 'granted') { window.addEventListener('deviceorientation', this.handleOrientation, true); btn.style.display = 'none'; } else { alert('কম্পাস ব্যবহার করতে পারমিশন প্রয়োজন।'); } }).catch(console.error); } else { window.addEventListener('deviceorientationabsolute', this.handleOrientation, true); window.addEventListener('deviceorientation', this.handleOrientation, true); btn.style.display = 'none'; } },
             handleOrientation(e) { const QIBLA_OFFSET = 270; let alpha = e.webkitCompassHeading || Math.abs(e.alpha - 360); if(alpha) { document.getElementById('compass-dial').style.transform = `rotate(${-alpha}deg)`; let qiblaDiff = QIBLA_OFFSET - alpha; document.getElementById('qibla-pointer').style.transform = `rotate(${qiblaDiff}deg)`; } },
             setupPWA() { if ('serviceWorker' in navigator) { navigator.serviceWorker.register('./sw.js').catch(() => {}); } window.addEventListener('beforeinstallprompt', (e) => { e.preventDefault(); this.state.deferredPrompt = e; const btn = document.getElementById('pwa-install-btn'); btn.classList.remove('hidden'); btn.addEventListener('click', () => { btn.classList.add('hidden'); this.state.deferredPrompt.prompt(); this.state.deferredPrompt = null; }); }); },
-            copyDua() { navigator.clipboard.writeText("اَللّٰهُمَّ لَكَ صُمْتُ وَ عَلَى رِزْقِكَ اَفْطَرْتُ"); alert('দোয়া কপি হয়েছে'); }
+            copyDua() { navigator.clipboard.writeText("اَللّٰهُمَّ لَكَ صُمْتُ وَ عَلَى رِزْقِكَ اَفْطَرْتُ"); alert('দোয়া কপি হয়েছে'); }
         };
         document.addEventListener('DOMContentLoaded', () => app.init());
     </script>
